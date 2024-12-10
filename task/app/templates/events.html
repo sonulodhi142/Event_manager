@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events | Campus Event Manager</title>
+    <link rel="stylesheet" href="{%static 'all.css'%}">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-title">
+        <h1> <img class="logo" src="images/event.png" alt=""> CAMPUS EVENT MANAGER</h1>
+      </div>
+    </header>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="{% url 'home' %}" class="nav-link">HOME</a></li>
+        <li><a href="{% url "events" %}" class="nav-link">EVENT</a></li>
+        <li><a href="{% url "proposal" %}" class="nav-link">PROPOSE EVENT</a></li>
+        <li><a href="{% url "register" %}" class="nav-link">REGISTER</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="events-list">
+        <h2 id="event-heading">Upcoming Events  <img class="contant-logo" src="images/appointment.png" alt=""></h2>
+        <div id="events-container">
+          
+          {% for event in events %}
+          <div class="event-card">
+            <img src="{{event.image.url}}" alt="Cultural Fest" class="event-image" />
+            <h3>{{event.event}}  <b class="event-symbol">&#10049;</b></h3>
+            <p><strong>Date:</strong> {{event.date}}</p>
+            <p><strong>Venue:</strong>{{event.vanue}}</p>
+            <button style=" background-color: green;"><a style="text-decoration: none; color: white; " href="{% url 'edit' event.id %}">EDIT EVENT</a></button>
+            <button style="margin-top: 5px; background-color: red;" onclick="window.location.href='{% url 'delete' event.id %}'">DELETE</button>
+            
+          </div>
+
+          {% endfor %}
+          
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Campus Event Manager. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

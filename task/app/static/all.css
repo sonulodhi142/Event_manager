@@ -1,0 +1,392 @@
+
+/* extra work */
+
+.contant-logo{
+  width: 50px;
+  position: absolute; 
+  padding-left: 10px;
+}
+
+#event-heading{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #292e33;
+    /* background-color: #c5c0c0; */
+    background-color: #292e33;
+    background-image: url(images/bg2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .logo{
+    width: 50px;
+  }
+  
+  header {
+    
+    
+    background-image: url(images/culture.webp);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-title h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  .navbar {
+    background-color: #ddd0c8;
+    box-shadow: 0x 4px 8px 6px palevioletred;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar .nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .navbar .nav-link {
+    color: black;
+    text-decoration: none;
+    /* margin: 0 1rem; */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 0.75rem 1.5rem;
+
+
+  }
+
+  
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: rgb(3, 3, 112);
+    color: white;
+  }
+  
+  .main-content {
+    padding: 2rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    color: #250621;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .event-section, .about-section, .contact-section {
+    background-color: #ddd0c8;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0x 4px 8px 6px palevioletred;
+  }
+  
+  .event-details, .about-content, .contact-details {
+    text-align: center;
+  }
+  
+  .about-image {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-details a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-details a:hover {
+    color: #1900ff;
+  }
+  
+  footer {
+    background-color: #250621;
+    background-image: url(images/culture.webp);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .navbar .nav-list {
+      flex-direction: column;
+    }
+  
+    .navbar .nav-link {
+      margin: 0.5rem 0;
+    }
+  
+    .main-content {
+      padding: 1rem;
+    }
+  }
+  
+
+
+
+  /* yaha se event wale page ki css likh raha hu */
+
+
+#events-list {
+    margin-top: 2rem;
+  }
+  
+  #events-list h2 {
+    text-align: center;
+    color: #250621;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background-color: #ddd0c8;
+  }
+  
+ 
+  #events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+
+  .event-card {
+    background-color: #ddd0c8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .event-card h3 {
+    color: black;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .event-symbol{
+    font-size: 30px;
+    color:#04696d ;
+  }
+  
+  .event-card p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  
+  .event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    
+  }
+  
+  
+  @media (max-width: 768px) {
+    .event-card {
+      padding: 1rem;
+    }
+  }
+
+  
+  /* yaha se m propse event page ki css likh raha hu */
+
+  
+#proposal-form {
+    background-color: #ddd0c8;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+  
+  #proposal-form h2 {
+    text-align: center;
+    color: #250621;
+  }
+  
+  .input-field {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-field input,
+  .input-field textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 2px solid #aaa; 
+    background-color: transparent;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .input-field input:focus,
+  .input-field textarea:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+  }
+  
+  .input-field label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #aaa;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .input-field input:focus ~ label,
+  .input-field textarea:focus ~ label,
+  .input-field input:not(:placeholder-shown) ~ label,
+  .input-field textarea:not(:placeholder-shown) ~ label {
+    top: -12px;
+    left: 10px;
+    font-size: 12px;
+    color: black;
+  }
+  
+  
+  button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+
+  /* yaha register page ki css likh raha hu */
+
+
+  main {
+    padding: 20px;
+  }
+  
+#registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ddd0c8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  #registration-form h2 {
+    text-align: center;
+    color: #250621;
+  }
+  
+  .input-field {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .input-field input,
+  .input-field select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .input-field input:focus,
+  .input-field select:focus {
+    border-color: black;
+  }
+  
+  .input-field label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #666;
+    transition: all 0.3s;
+  }
+  
+  .input-field input:focus + label,
+  .input-field select:focus + label,
+  .input-field input:not(:placeholder-shown) + label,
+  .input-field select:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: black;
+  }
+  
+  button {
+    background-color: rgb(2, 2, 80);
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  

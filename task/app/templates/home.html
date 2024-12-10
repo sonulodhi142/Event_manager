@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Campus Event Manager</title>
+  
+   <link rel="stylesheet" href="{% static "all.css" %}">
+</head>
+<body>
+  <header class="header">
+    <div class="header-title">
+      <h1> <img class="logo" src="images/event.png" alt=""> CAMPUS EVENT MANAGER</h1>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="{% url 'home' %}" class="nav-link">HOME</a></li>
+      <li><a href="{% url "events" %}" class="nav-link">EVENT</a></li>
+      <li><a href="{% url "proposal" %}" class="nav-link">PROPOSE EVENT</a></li>
+      <li><a href="{% url "register" %}" class="nav-link">REGISTER</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section class="event-section">
+      <h2 class="section-title">Upcoming Event <img class="contant-logo" src="images/appointment.png" alt=""></h2>
+      <div class="event-details">
+        <p><b>Event:</b> Cultural Fest</p>
+        <p><b>Date:</b> 15th December 2024</p>
+        <p><b>Location:</b> University Auditorium</p>
+        <p><b>time left:</b></p><p id="countdown-timer">000000</p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2 class="section-title">About Event Manager <img class="contant-logo" src="images/about.png" alt=""></h2>
+      <div class="about-content">
+        <p>Campus Event Manager is your ultimate platform to organize and participate in exciting events. From cultural fests to tech meetups, we bring the entire campus together to celebrate, collaborate, and create unforgettable memories. Our aim is to empower students to showcase their talents, connect with peers, and make every event a grand success."</p>
+        <img src="images/about-img.jpeg" alt="About Event Manager" class="about-image" />
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2 class="section-title">Contact Us <img class="contant-logo" src="images/contact-us.png" alt=""></h2>
+      <div class="contact-details">
+        <p><b style="font-size: 20px;">&#9993;:</b> <a href="mailto:sonulodhis@142gmail.com">sonulodhis@142gmail.com</a></p>
+        <p><b>&#x260F;  : </b> <a href="tel:9575539557">9575539557</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Campus Event Manager. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

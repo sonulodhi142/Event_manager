@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Campus Event Manager</title>
+  
+   <link rel="stylesheet" href="{% static "all.css" %}">
+</head>
+<body>
+  <header class="header">
+    <div class="header-title" >
+      <h1> <img class="logo" src="images/event.png" alt=""> CAMPUS EVENT MANAGER</h1>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="{% url 'home' %}" class="nav-link">HOME</a></li>
+      <li><a href="{% url "events" %}" class="nav-link">EVENT</a></li>
+      <li><a href="{% url "proposal" %}" class="nav-link">PROPOSE EVENT</a></li>
+      <li><a href="{% url "register" %}" class="nav-link">REGISTER</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section id="registration-form" style="height: 323px;  justify-contant: center; align-contant: center;">
+        <div style="height: 300px;  justify-contant: center;">
+
+            <h3 style='padding-top: 100px; padding-left: 30px; color: green'>The Proposal Event  succesfully submited 👍 !</h3>
+            <h3 style=' padding-left: 180px;'><a href="{% url "proposal"%}">Go Back</a></h3>
+            
+        </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Campus Event Manager. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

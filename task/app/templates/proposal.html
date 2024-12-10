@@ -1,0 +1,58 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propose Event | Campus Event Manager</title>
+    <link rel="stylesheet" href="{% static "all.css" %}" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-title">
+        <h1> <img class="logo" src="images/event.png" alt=""> CAMPUS EVENT MANAGER</h1>
+      </div>
+    </header>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="{% url 'home' %}" class="nav-link">HOME</a></li>
+        <li><a href="{% url "events" %}" class="nav-link">EVENT</a></li>
+        <li><a href="{% url "proposal" %}" class="nav-link">PROPOSE EVENT</a></li>
+        <li><a href="{% url "register" %}" class="nav-link">REGISTER</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="proposal-form">
+        <h2 class="t-h">PROPOSE AN EVENT <img class="contant-logo" src="images/edit.png" alt=""></h2>
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="input-field">
+            <input type="text" id="event-title" name="event" value="{{ event.event }}" placeholder=" " required />
+            <label for="event-title">Event Title</label>
+          </div>
+
+          <div class="input-field">
+            <input type="date" id="event-date" name="date" value="{{ event.date }}" required />
+            <label for="event-date">Date</label>
+          </div>
+
+          <div class="input-field">
+            <input type="text" id="event-venue" placeholder=" " value="{{ event.vanue }}" name="venue" required />
+            <label for="event-venue">Venue</label>
+          </div>
+
+          <div class="input-field">
+            <input type="file" id="event-venue" placeholder=" " name="image" required />
+            <label for="event-description">Upload Image</label>
+          </div>
+
+          <button type="submit">Submit Proposal</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Campus Event Manager. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
