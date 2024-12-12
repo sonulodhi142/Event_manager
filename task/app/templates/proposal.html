@@ -1,27 +1,9 @@
+{% extends "home.html" %}
 
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Propose Event | Campus Event Manager</title>
-    <link rel="stylesheet" href="{% static "all.css" %}" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header-title">
-        <h1> <img class="logo" src="images/event.png" alt=""> CAMPUS EVENT MANAGER</h1>
-      </div>
-    </header>
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li><a href="{% url 'home' %}" class="nav-link">HOME</a></li>
-        <li><a href="{% url "events" %}" class="nav-link">EVENT</a></li>
-        <li><a href="{% url "proposal" %}" class="nav-link">PROPOSE EVENT</a></li>
-        <li><a href="{% url "register" %}" class="nav-link">REGISTER</a></li>
-      </ul>
-    </nav>
+
+
+
+    {% block main %}
     <main>
       <section id="proposal-form">
         <h2 class="t-h">PROPOSE AN EVENT <img class="contant-logo" src="images/edit.png" alt=""></h2>
@@ -51,8 +33,5 @@
         </form>
       </section>
     </main>
-    <footer>
-      <p>&copy; 2024 Campus Event Manager. All Rights Reserved.</p>
-    </footer>
-  </body>
-</html>
+    {% endblock main %}
+    

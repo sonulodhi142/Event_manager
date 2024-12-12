@@ -1,57 +1,32 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register | Campus Event Manager</title>
-    <link rel="stylesheet" href="{% static "all.css" %}" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header-title">
-        <h1> <img class="logo" src="images/event.png" alt=""> CAMPUS EVENT MANAGER</h1>
+{% extends "home.html" %}
+
+
+{% block main %}
+<main>
+  <section id="registration-form">
+    <h2 class="t-h">REGISTER FOR AN EVENT <img class="contant-logo" src="images/edit.png" alt=""></h2>
+    <form method="post">
+      {% csrf_token %}
+      <div class="input-field">
+        <input type="text" id="name" name="name" placeholder=" " required />
+        <label for="name">Name</label>
       </div>
-    </header>
-    <nav>
-      <nav class="navbar">
-        <ul class="nav-list">
-          <li><a href="{% url 'home' %}" class="nav-link">HOME</a></li>
-          <li><a href="{% url "events" %}" class="nav-link">EVENT</a></li>
-          <li><a href="{% url "proposal" %}" class="nav-link">PROPOSE EVENT</a></li>
-          <li><a href="{% url "register" %}" class="nav-link">REGISTER</a></li>
-        </ul>
-      </nav>
-    </nav>
-    <main>
-      <section id="registration-form">
-        <h2 class="t-h">REGISTER FOR AN EVENT <img class="contant-logo" src="images/edit.png" alt=""></h2>
-        <form method="post">
-          {% csrf_token %}
-          <div class="input-field">
-            <input type="text" id="name" name="name" placeholder=" " required />
-            <label for="name">Name</label>
-          </div>
 
-          
-          <div class="input-field">
-            <input type="email" id="email" name="email" placeholder=" " required />
-            <label for="email">Email</label>
-          </div>
+      
+      <div class="input-field">
+        <input type="email" id="email" name="email" placeholder=" " required />
+        <label for="email">Email</label>
+      </div>
 
-          
-          <div class="input-field">
-            <input type="text" id="eventName" name="eventName" placeholder=" " required />
-            <label for="eventName">Event Name</label>
-          </div>
+      
+      <div class="input-field">
+        <input type="text" id="eventName" name="eventName" placeholder=" " required />
+        <label for="eventName">Event Name</label>
+      </div>
 
-          
-          <button type="submit">Register</button>
-        </form>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2024 Campus Event Manager. All Rights Reserved.</p>
-    </footer>
-  </body>
-</html>
+      
+      <button type="submit">Register</button>
+    </form>
+  </section>
+</main>
+{% endblock main %}
